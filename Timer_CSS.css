@@ -1,0 +1,106 @@
+* {
+	user-select: none;
+	outline: none;
+}
+body {
+	background-color: #E8E8E8;
+}
+table {
+	margin: 15px auto auto;
+}
+.time {
+	font-size: 40px;
+	font-family: Arial Black;
+}
+.keyPad {
+	height: 75px;
+	width: 75px;
+	font-size: 30px;
+	border: 1px solid red;
+	border-radius: 50%;
+	background-color: white;
+	color: red;
+	transition: background-color 0.5s ease, color 0.5s ease;
+}
+.keyPad:hover {
+	background-color: red;
+	color: white;
+}
+.timerButton {
+	background-color: white;
+	height: 45px;
+	padding: 10px;
+	width: 75px;
+	font-size: 20px;
+}
+
+#start:hover:not(:disabled),
+#pause:hover:not(:disabled),
+#reset:hover:not(:disabled) {
+	color: white;
+}
+#start:disabled,
+#pause:disabled,
+#reset:disabled,
+.keyPad:disabled {
+	border: 1px solid #9c9c9c;
+	color: #9c9c9c;
+	background-color: #f1f1f1;
+}
+#start {
+	border: 1px solid #02BD02;
+	color: #02BD02;
+	transition: color 0.5s ease, background-color 0.5s ease;
+}
+#start:hover:not(:disabled) {
+	background-color: #02BD02;
+}
+
+#pause {
+	border: 1px solid orange;
+	color: orange;
+	transition: color 0.5s ease, background-color 0.5s ease;
+}
+#pause:hover:not(:disabled) {
+	background-color: orange;
+}
+
+#reset {
+	border: 1px solid red;
+	color: red;
+	transition: color 0.5s ease, background-color 0.5s ease;
+}
+#reset:hover:not(:disabled) {
+	background-color: red;
+}
+
+#section {
+	margin: auto;
+	border: 1px solid black;
+	text-align: center;
+	font-size: 50px;
+	font-family: Sans-Serif;
+	width: 400px;
+	height: 550px;
+	background-color: white;
+	border-radius: 75px;
+}
+#header {
+	font-size: 35px;
+	font-family: initial;
+	margin: 10px;
+}
+#timer {
+	text-align: center;
+}
+.animate {
+	animation: blink  1s step-start 0s infinite;
+}
+@keyframes blink {
+	50% {
+		color: red;
+	}
+	100% {
+		color: black;
+	}
+}
