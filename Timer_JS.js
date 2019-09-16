@@ -1,18 +1,18 @@
-var hours = document.getElementById("Hours");
-var minutes = document.getElementById("Minutes");
-var seconds = document.getElementById("Seconds");
+let hours = document.getElementById("Hours"), 
+    minutes = document.getElementById("Minutes"), 
+    seconds = document.getElementById("Seconds");
 
-var startBtn = document.getElementById("start");
-var pauseBtn = document.getElementById("pause");
-var resetBtn = document.getElementById("reset");
+let startBtn = document.getElementById("start"),
+    pauseBtn = document.getElementById("pause"),
+    resetBtn = document.getElementById("reset");
 
-var lblTime = document.getElementsByClassName("time");
+let lblTime = document.getElementsByClassName("time");
 
-var time = "0";
-var timer;
-var ms = 1000;
+let time = "0", 
+    timer,
+    ms = 1000;
 
-var audio = new Audio("TimesUp.mp3");
+let audio = new Audio("TimesUp.mp3");
 
 document.addEventListener("keydown", function (e) {
 	if (parseInt(time.length) !== 6 || e.key == "Backspace") {
@@ -119,8 +119,7 @@ function startTimer() {
 	correctTimer();
 	disableEnableKeyPad("disable");
 	
-	var i;
-	for (i = 0; i < lblTime.length; i++) {
+	for (let i = 0; i < lblTime.length; i++) {
 		lblTime[i].classList.remove("animate");
 	}
 	
@@ -134,8 +133,7 @@ function startTimer() {
 function pauseTimer() {
 	clearInterval(timer);
 	
-	var i;
-	for (i = 0; i < lblTime.length; i++) {
+	for (let i = 0; i < lblTime.length; i++) {
 		lblTime[i].classList.add("animate");
 	}
 	
@@ -148,8 +146,7 @@ function resetTimer() {
 	disableEnableKeyPad("enable");
 	time = "0";
 	
-	var i;
-	for (i = 0; i < lblTime.length; i++) {
+	for (let i = 0; i < lblTime.length; i++) {
 		lblTime[i].classList.remove("animate");
 	}
 	
